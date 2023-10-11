@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução jQuery</title>
+
+    <!-- Chamando biblioteca jQuary -->
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+        <!-- Funcionalidades da página -->
+        <script type="text/javascript">
+            // function pegarvalor(){
+            //     var valorform = $('.nome').val();
+            //     alert(valorform);
+            // }
+
+            function pegarvalor(){
+                //valor que esta fora da classe
+                var valorform = document.querySelector('.nome').value;
+                var valorformMail = document.querySelector('.email').value;
+                var valorformMensagem = document.querySelector('.mensagem').value;
+
+                alert('Olá, ' + valorform+
+                ', Seu e-mail: ' +valorformMail+ 
+                ', Mensagem do Usúario: '+ valorformMensagem
+                );    
+                
+                alert('insert into nometabela(nome, email, mensagem)value(' +valorform+', '+valorformMail+', '+valorformMensagem+')');
+
+            }
+            $(document).ready(function () {
+                $("a").click(function () {
+                    alert('Você perdeu!');
+                })
+            });
+        </script>
+</head>
+<body>
+    <form action="">                         <!-- required: faz com que seja necessário para continuar na página-->
+        <input type="text" name="nome" placeholder="Insira seu Nome" required class="nome">     
+        <input type="text" name="email" placeholder="Insira seu @gmail.com" required class="email">
+        <textarea  name="mensagem" placeholder="Comente aqui sua mensagem" cols="30" rows="10" required class="mensagem"></textarea>
+        
+        <button onclick="pegarvalor()">Enviar</button>
+    </form>
+
+    <hr>
+    <a href="#">Não clique aqui</a>
+</body>
+</html>
