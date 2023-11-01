@@ -11,26 +11,16 @@
     <!-- Funcionalidades da página -->
         <script type="text/javascript">
             $(document).ready(function(){
-                $("#listaOrdenada li").css("color", "red");
-                $(".listaOrdenadaDois li").css("color", "green");
-                //$("ul").css("color", "blue");
-                $("p").css("color", "blue")
+                $(".content").html("<img width='100%' src='https://www.showmetech.com.br/wp-content/uploads//2021/02/capa-dog-1920x1024.jpg' alt='imagem'> ");
+            
+                $("img").click(function(){
+                    $(".hello").html("<h1>A imagem foi clicada :D</h1>")
+                })
             })   
         </script>
 </head>
 <body>
-    <ul id="listaOrdenada">
-        <li>Link 01</li>
-        <li>Link 02</li>
-        <li>Link 03</li>
-    </ul>
-
-    <ul class="listaOrdenadaDois">
-        <li>Link 01</li>
-        <li>Link 02</li>
-        <li>Link 03</li>
-    </ul>
-    <p>texto</p>
-
+        <div class="content"></div>
+        <div class="hello"></div>
 </body>
 </html>
